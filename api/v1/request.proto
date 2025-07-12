@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package http.v1;
+
+import "google/protobuf/struct.proto";
+import "header.proto";
+import "method.proto";
+import "url.proto";
+import "version.proto";
+
+option go_package = "github.com/chaos-io/http/api/v1;http";
+
+message Request {
+  Method method = 1;
+  Url url = 2;
+  Version version = 3;
+  Header header = 4;
+  google.protobuf.Value body = 5;
+}

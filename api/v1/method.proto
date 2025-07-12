@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package http.v1;
+
+option go_package = "github.com/chaos-io/http/api/v1;http";
+
+enum Method {
+  METHOD_UNSPECIFIED = 0;
+  METHOD_GET = 1;
+  METHOD_POST = 2;
+  METHOD_PUT = 3;
+  METHOD_DELETE = 4;
+  METHOD_CONNECT = 5;
+  METHOD_OPTIONS = 6;
+  METHOD_TRACE = 7;
+}

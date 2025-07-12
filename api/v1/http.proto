@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package http.v1;
+
+option go_package = "github.com/chaos-io/http/api/v1;http";
+
+message Resource {
+  string id = 1;
+  string name = 2;
+}
+
+message CreateResourceRequest {
+  Resource resource = 1;
+  string locale = 10;
+}
+
+message GetResourceRequest {
+  string id = 1;
+}
+
+message ListResourcesRequest {}
+
+message ListResourcesResponse {
+  repeated Resource resources = 1;
+}
+
+message UpdateResourceRequest {
+  Resource resource = 1;
+  string locale = 10;
+}
+
+message DeleteResourceRequest {
+  string id = 1;
+  string locale = 10;
+}
+
+message DeleteResourceResponse {
+  string id = 1;
+}
