@@ -3,54 +3,44 @@
 
 ## Table of Contents
 
-- [authority.proto](#authority-proto)
-    - [Authority](#http-v1-Authority)
+- [http/authority.proto](#http_authority-proto)
+    - [Authority](#http-Authority)
   
-- [string_values.proto](#string_values-proto)
-    - [StringValues](#http-v1-StringValues)
+- [http/string_values.proto](#http_string_values-proto)
+    - [StringValues](#http-StringValues)
   
-- [header.proto](#header-proto)
-    - [Header](#http-v1-Header)
-    - [Header.ValsEntry](#http-v1-Header-ValsEntry)
+- [http/header.proto](#http_header-proto)
+    - [Header](#http-Header)
+    - [Header.ValsEntry](#http-Header-ValsEntry)
   
-- [http.proto](#http-proto)
-    - [CreateResourceRequest](#http-v1-CreateResourceRequest)
-    - [DeleteResourceRequest](#http-v1-DeleteResourceRequest)
-    - [DeleteResourceResponse](#http-v1-DeleteResourceResponse)
-    - [GetResourceRequest](#http-v1-GetResourceRequest)
-    - [ListResourcesRequest](#http-v1-ListResourcesRequest)
-    - [ListResourcesResponse](#http-v1-ListResourcesResponse)
-    - [Resource](#http-v1-Resource)
-    - [UpdateResourceRequest](#http-v1-UpdateResourceRequest)
+- [http/method.proto](#http_method-proto)
+    - [Method](#http-Method)
   
-- [method.proto](#method-proto)
-    - [Method](#http-v1-Method)
+- [http/query.proto](#http_query-proto)
+    - [Query](#http-Query)
+    - [Query.ValsEntry](#http-Query-ValsEntry)
   
-- [query.proto](#query-proto)
-    - [Query](#http-v1-Query)
-    - [Query.ValsEntry](#http-v1-Query-ValsEntry)
+- [http/url.proto](#http_url-proto)
+    - [Url](#http-Url)
   
-- [url.proto](#url-proto)
-    - [Url](#http-v1-Url)
+- [http/version.proto](#http_version-proto)
+    - [Version](#http-Version)
   
-- [version.proto](#version-proto)
-    - [Version](#http-v1-Version)
-  
-- [request.proto](#request-proto)
-    - [Request](#http-v1-Request)
+- [http/request.proto](#http_request-proto)
+    - [Request](#http-Request)
   
 - [Scalar Value Types](#scalar-value-types)
 
 
 
-<a name="authority-proto"></a>
+<a name="http_authority-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## authority.proto
+## http/authority.proto
 
 
 
-<a name="http-v1-Authority"></a>
+<a name="http-Authority"></a>
 
 ### Authority
 
@@ -76,14 +66,14 @@
 
 
 
-<a name="string_values-proto"></a>
+<a name="http_string_values-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## string_values.proto
+## http/string_values.proto
 
 
 
-<a name="http-v1-StringValues"></a>
+<a name="http-StringValues"></a>
 
 ### StringValues
 
@@ -107,14 +97,14 @@
 
 
 
-<a name="header-proto"></a>
+<a name="http_header-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## header.proto
+## http/header.proto
 
 
 
-<a name="http-v1-Header"></a>
+<a name="http-Header"></a>
 
 ### Header
 
@@ -122,14 +112,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| Vals | [Header.ValsEntry](#http-v1-Header-ValsEntry) | repeated |  |
+| Vals | [Header.ValsEntry](#http-Header-ValsEntry) | repeated |  |
 
 
 
 
 
 
-<a name="http-v1-Header-ValsEntry"></a>
+<a name="http-Header-ValsEntry"></a>
 
 ### Header.ValsEntry
 
@@ -138,7 +128,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
-| value | [StringValues](#http-v1-StringValues) |  |  |
+| value | [StringValues](#http-StringValues) |  |  |
 
 
 
@@ -154,151 +144,16 @@
 
 
 
-<a name="http-proto"></a>
+<a name="http_method-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http.proto
-
-
-
-<a name="http-v1-CreateResourceRequest"></a>
-
-### CreateResourceRequest
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| resource | [Resource](#http-v1-Resource) |  |  |
-| locale | [string](#string) |  |  |
-
-
-
-
-
-
-<a name="http-v1-DeleteResourceRequest"></a>
-
-### DeleteResourceRequest
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| id | [string](#string) |  |  |
-| locale | [string](#string) |  |  |
-
-
-
-
-
-
-<a name="http-v1-DeleteResourceResponse"></a>
-
-### DeleteResourceResponse
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| id | [string](#string) |  |  |
-
-
-
-
-
-
-<a name="http-v1-GetResourceRequest"></a>
-
-### GetResourceRequest
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| id | [string](#string) |  |  |
-
-
-
-
-
-
-<a name="http-v1-ListResourcesRequest"></a>
-
-### ListResourcesRequest
-
-
-
-
-
-
-
-<a name="http-v1-ListResourcesResponse"></a>
-
-### ListResourcesResponse
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| resources | [Resource](#http-v1-Resource) | repeated |  |
-
-
-
-
-
-
-<a name="http-v1-Resource"></a>
-
-### Resource
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| id | [string](#string) |  |  |
-| name | [string](#string) |  |  |
-
-
-
-
-
-
-<a name="http-v1-UpdateResourceRequest"></a>
-
-### UpdateResourceRequest
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| resource | [Resource](#http-v1-Resource) |  |  |
-| locale | [string](#string) |  |  |
-
-
-
-
-
- 
-
- 
-
- 
-
- 
-
-
-
-<a name="method-proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## method.proto
+## http/method.proto
 
 
  
 
 
-<a name="http-v1-Method"></a>
+<a name="http-Method"></a>
 
 ### Method
 
@@ -323,14 +178,14 @@
 
 
 
-<a name="query-proto"></a>
+<a name="http_query-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## query.proto
+## http/query.proto
 
 
 
-<a name="http-v1-Query"></a>
+<a name="http-Query"></a>
 
 ### Query
 
@@ -338,14 +193,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| Vals | [Query.ValsEntry](#http-v1-Query-ValsEntry) | repeated |  |
+| Vals | [Query.ValsEntry](#http-Query-ValsEntry) | repeated |  |
 
 
 
 
 
 
-<a name="http-v1-Query-ValsEntry"></a>
+<a name="http-Query-ValsEntry"></a>
 
 ### Query.ValsEntry
 
@@ -354,7 +209,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
-| value | [StringValues](#http-v1-StringValues) |  |  |
+| value | [StringValues](#http-StringValues) |  |  |
 
 
 
@@ -370,14 +225,14 @@
 
 
 
-<a name="url-proto"></a>
+<a name="http_url-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## url.proto
+## http/url.proto
 
 
 
-<a name="http-v1-Url"></a>
+<a name="http-Url"></a>
 
 ### Url
 
@@ -386,10 +241,10 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | scheme | [string](#string) |  |  |
-| authority | [Authority](#http-v1-Authority) |  |  |
+| authority | [Authority](#http-Authority) |  |  |
 | path | [string](#string) |  |  |
 | raw_path | [string](#string) |  |  |
-| query | [Query](#http-v1-Query) |  |  |
+| query | [Query](#http-Query) |  |  |
 | raw_query | [string](#string) |  |  |
 | fragment | [string](#string) |  |  |
 | raw_fragment | [string](#string) |  |  |
@@ -408,14 +263,14 @@
 
 
 
-<a name="version-proto"></a>
+<a name="http_version-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## version.proto
+## http/version.proto
 
 
 
-<a name="http-v1-Version"></a>
+<a name="http-Version"></a>
 
 ### Version
 
@@ -441,14 +296,14 @@
 
 
 
-<a name="request-proto"></a>
+<a name="http_request-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## request.proto
+## http/request.proto
 
 
 
-<a name="http-v1-Request"></a>
+<a name="http-Request"></a>
 
 ### Request
 
@@ -456,10 +311,10 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| method | [Method](#http-v1-Method) |  |  |
-| url | [Url](#http-v1-Url) |  |  |
-| version | [Version](#http-v1-Version) |  |  |
-| header | [Header](#http-v1-Header) |  |  |
+| method | [Method](#http-Method) |  |  |
+| url | [Url](#http-Url) |  |  |
+| version | [Version](#http-Version) |  |  |
+| header | [Header](#http-Header) |  |  |
 | body | [google.protobuf.Value](#google-protobuf-Value) |  |  |
 
 

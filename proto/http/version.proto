@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package http;
+
+option go_package = "github.com/chaos-io/http/go;http";
+
+message Version {
+  string proto = 1;
+  int32 major = 5;
+  int32 minor = 6;
+}

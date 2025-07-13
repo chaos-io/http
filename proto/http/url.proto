@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package http;
+
+import "http/authority.proto";
+import "http/query.proto";
+
+option go_package = "github.com/chaos-io/http/go;http";
+
+message Url {
+  string scheme = 1;
+  Authority authority = 2;
+  string path = 3;
+  string raw_path = 4;
+  Query query = 10;
+  string raw_query = 11;
+  string fragment = 15;
+  string raw_fragment = 16;
+}

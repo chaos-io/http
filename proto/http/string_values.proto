@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package http;
+
+option go_package = "github.com/chaos-io/http/go;http";
+
+message StringValues {
+  repeated string vals = 1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package http;
+
+option go_package = "github.com/chaos-io/http/go;http";
+
+message Authority {
+  string user_info = 1;
+  string host = 2;
+  string port = 3;
+}

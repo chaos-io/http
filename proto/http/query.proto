@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package http;
+
+import "http/string_values.proto";
+
+option go_package = "github.com/chaos-io/http/go;http";
+
+message Query {
+  map<string, StringValues> Vals = 1;
+}
