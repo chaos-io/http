@@ -175,11 +175,11 @@
         
           
           <li>
-            <a href="#http%2fauthority.proto">http/authority.proto</a>
+            <a href="#chaos%2fhttp%2fauthority.proto">chaos/http/authority.proto</a>
             <ul>
               
                 <li>
-                  <a href="#http.Authority"><span class="badge">M</span>Authority</a>
+                  <a href="#chaos.http.Authority"><span class="badge">M</span>Authority</a>
                 </li>
               
               
@@ -190,11 +190,15 @@
         
           
           <li>
-            <a href="#http%2fstring_values.proto">http/string_values.proto</a>
+            <a href="#chaos%2fhttp%2fheader.proto">chaos/http/header.proto</a>
             <ul>
               
                 <li>
-                  <a href="#http.StringValues"><span class="badge">M</span>StringValues</a>
+                  <a href="#chaos.http.Header"><span class="badge">M</span>Header</a>
+                </li>
+              
+                <li>
+                  <a href="#chaos.http.Header.ValsEntry"><span class="badge">M</span>Header.ValsEntry</a>
                 </li>
               
               
@@ -205,15 +209,30 @@
         
           
           <li>
-            <a href="#http%2fheader.proto">http/header.proto</a>
+            <a href="#chaos%2fhttp%2fmethod.proto">chaos/http/method.proto</a>
+            <ul>
+              
+              
+                <li>
+                  <a href="#chaos.http.Method"><span class="badge">E</span>Method</a>
+                </li>
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#chaos%2fhttp%2fquery.proto">chaos/http/query.proto</a>
             <ul>
               
                 <li>
-                  <a href="#http.Header"><span class="badge">M</span>Header</a>
+                  <a href="#chaos.http.Query"><span class="badge">M</span>Query</a>
                 </li>
               
                 <li>
-                  <a href="#http.Header.ValsEntry"><span class="badge">M</span>Header.ValsEntry</a>
+                  <a href="#chaos.http.Query.ValsEntry"><span class="badge">M</span>Query.ValsEntry</a>
                 </li>
               
               
@@ -224,30 +243,11 @@
         
           
           <li>
-            <a href="#http%2fmethod.proto">http/method.proto</a>
-            <ul>
-              
-              
-                <li>
-                  <a href="#http.Method"><span class="badge">E</span>Method</a>
-                </li>
-              
-              
-              
-            </ul>
-          </li>
-        
-          
-          <li>
-            <a href="#http%2fquery.proto">http/query.proto</a>
+            <a href="#chaos%2fhttp%2furl.proto">chaos/http/url.proto</a>
             <ul>
               
                 <li>
-                  <a href="#http.Query"><span class="badge">M</span>Query</a>
-                </li>
-              
-                <li>
-                  <a href="#http.Query.ValsEntry"><span class="badge">M</span>Query.ValsEntry</a>
+                  <a href="#chaos.http.Url"><span class="badge">M</span>Url</a>
                 </li>
               
               
@@ -258,11 +258,11 @@
         
           
           <li>
-            <a href="#http%2furl.proto">http/url.proto</a>
+            <a href="#chaos%2fhttp%2fversion.proto">chaos/http/version.proto</a>
             <ul>
               
                 <li>
-                  <a href="#http.Url"><span class="badge">M</span>Url</a>
+                  <a href="#chaos.http.Version"><span class="badge">M</span>Version</a>
                 </li>
               
               
@@ -273,26 +273,11 @@
         
           
           <li>
-            <a href="#http%2fversion.proto">http/version.proto</a>
+            <a href="#chaos%2fhttp%2frequest.proto">chaos/http/request.proto</a>
             <ul>
               
                 <li>
-                  <a href="#http.Version"><span class="badge">M</span>Version</a>
-                </li>
-              
-              
-              
-              
-            </ul>
-          </li>
-        
-          
-          <li>
-            <a href="#http%2frequest.proto">http/request.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#http.Request"><span class="badge">M</span>Request</a>
+                  <a href="#chaos.http.Request"><span class="badge">M</span>Request</a>
                 </li>
               
               
@@ -308,12 +293,12 @@
     
       
       <div class="file-heading">
-        <h2 id="http/authority.proto">http/authority.proto</h2><a href="#title">Top</a>
+        <h2 id="chaos/http/authority.proto">chaos/http/authority.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="http.Authority">Authority</h3>
+        <h3 id="chaos.http.Authority">Authority</h3>
         <p></p>
 
         
@@ -360,50 +345,12 @@
     
       
       <div class="file-heading">
-        <h2 id="http/string_values.proto">http/string_values.proto</h2><a href="#title">Top</a>
+        <h2 id="chaos/http/header.proto">chaos/http/header.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="http.StringValues">StringValues</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>vals</td>
-                  <td><a href="#string">string</a></td>
-                  <td>repeated</td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="http/header.proto">http/header.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="http.Header">Header</h3>
+        <h3 id="chaos.http.Header">Header</h3>
         <p></p>
 
         
@@ -415,7 +362,7 @@
               
                 <tr>
                   <td>Vals</td>
-                  <td><a href="#http.Header.ValsEntry">Header.ValsEntry</a></td>
+                  <td><a href="#chaos.http.Header.ValsEntry">Header.ValsEntry</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -427,7 +374,7 @@
 
         
       
-        <h3 id="http.Header.ValsEntry">Header.ValsEntry</h3>
+        <h3 id="chaos.http.Header.ValsEntry">Header.ValsEntry</h3>
         <p></p>
 
         
@@ -446,7 +393,7 @@
               
                 <tr>
                   <td>value</td>
-                  <td><a href="#http.StringValues">StringValues</a></td>
+                  <td><a href="#chaos.core.Values">chaos.core.Values</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -467,14 +414,14 @@
     
       
       <div class="file-heading">
-        <h2 id="http/method.proto">http/method.proto</h2><a href="#title">Top</a>
+        <h2 id="chaos/http/method.proto">chaos/http/method.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
 
       
-        <h3 id="http.Method">Method</h3>
+        <h3 id="chaos.http.Method">Method</h3>
         <p></p>
         <table class="enum-table">
           <thead>
@@ -540,12 +487,12 @@
     
       
       <div class="file-heading">
-        <h2 id="http/query.proto">http/query.proto</h2><a href="#title">Top</a>
+        <h2 id="chaos/http/query.proto">chaos/http/query.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="http.Query">Query</h3>
+        <h3 id="chaos.http.Query">Query</h3>
         <p></p>
 
         
@@ -557,7 +504,7 @@
               
                 <tr>
                   <td>Vals</td>
-                  <td><a href="#http.Query.ValsEntry">Query.ValsEntry</a></td>
+                  <td><a href="#chaos.http.Query.ValsEntry">Query.ValsEntry</a></td>
                   <td>repeated</td>
                   <td><p> </p></td>
                 </tr>
@@ -569,7 +516,7 @@
 
         
       
-        <h3 id="http.Query.ValsEntry">Query.ValsEntry</h3>
+        <h3 id="chaos.http.Query.ValsEntry">Query.ValsEntry</h3>
         <p></p>
 
         
@@ -588,7 +535,7 @@
               
                 <tr>
                   <td>value</td>
-                  <td><a href="#http.StringValues">StringValues</a></td>
+                  <td><a href="#chaos.core.Values">chaos.core.Values</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -609,12 +556,12 @@
     
       
       <div class="file-heading">
-        <h2 id="http/url.proto">http/url.proto</h2><a href="#title">Top</a>
+        <h2 id="chaos/http/url.proto">chaos/http/url.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="http.Url">Url</h3>
+        <h3 id="chaos.http.Url">Url</h3>
         <p></p>
 
         
@@ -633,7 +580,7 @@
               
                 <tr>
                   <td>authority</td>
-                  <td><a href="#http.Authority">Authority</a></td>
+                  <td><a href="#chaos.http.Authority">Authority</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -654,7 +601,7 @@
               
                 <tr>
                   <td>query</td>
-                  <td><a href="#http.Query">Query</a></td>
+                  <td><a href="#chaos.http.Query">Query</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -696,12 +643,12 @@
     
       
       <div class="file-heading">
-        <h2 id="http/version.proto">http/version.proto</h2><a href="#title">Top</a>
+        <h2 id="chaos/http/version.proto">chaos/http/version.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="http.Version">Version</h3>
+        <h3 id="chaos.http.Version">Version</h3>
         <p></p>
 
         
@@ -748,12 +695,12 @@
     
       
       <div class="file-heading">
-        <h2 id="http/request.proto">http/request.proto</h2><a href="#title">Top</a>
+        <h2 id="chaos/http/request.proto">chaos/http/request.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
 
       
-        <h3 id="http.Request">Request</h3>
+        <h3 id="chaos.http.Request">Request</h3>
         <p></p>
 
         
@@ -765,35 +712,35 @@
               
                 <tr>
                   <td>method</td>
-                  <td><a href="#http.Method">Method</a></td>
+                  <td><a href="#chaos.http.Method">Method</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>url</td>
-                  <td><a href="#http.Url">Url</a></td>
+                  <td><a href="#chaos.http.Url">Url</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>version</td>
-                  <td><a href="#http.Version">Version</a></td>
+                  <td><a href="#chaos.http.Version">Version</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>header</td>
-                  <td><a href="#http.Header">Header</a></td>
+                  <td><a href="#chaos.http.Header">Header</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
               
                 <tr>
                   <td>body</td>
-                  <td><a href="#google.protobuf.Value">google.protobuf.Value</a></td>
+                  <td><a href="#chaos.core.Value">chaos.core.Value</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>

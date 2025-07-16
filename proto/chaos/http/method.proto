@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package http;
+package chaos.http;
 
-option go_package = "github.com/chaos-io/http/go;http";
+option go_package = "github.com/chaos-io/http/go/chaos/http;http";
 
 enum Method {
   METHOD_UNSPECIFIED = 0;

@@ -3,44 +3,41 @@
 
 ## Table of Contents
 
-- [http/authority.proto](#http_authority-proto)
-    - [Authority](#http-Authority)
+- [chaos/http/authority.proto](#chaos_http_authority-proto)
+    - [Authority](#chaos-http-Authority)
   
-- [http/string_values.proto](#http_string_values-proto)
-    - [StringValues](#http-StringValues)
+- [chaos/http/header.proto](#chaos_http_header-proto)
+    - [Header](#chaos-http-Header)
+    - [Header.ValsEntry](#chaos-http-Header-ValsEntry)
   
-- [http/header.proto](#http_header-proto)
-    - [Header](#http-Header)
-    - [Header.ValsEntry](#http-Header-ValsEntry)
+- [chaos/http/method.proto](#chaos_http_method-proto)
+    - [Method](#chaos-http-Method)
   
-- [http/method.proto](#http_method-proto)
-    - [Method](#http-Method)
+- [chaos/http/query.proto](#chaos_http_query-proto)
+    - [Query](#chaos-http-Query)
+    - [Query.ValsEntry](#chaos-http-Query-ValsEntry)
   
-- [http/query.proto](#http_query-proto)
-    - [Query](#http-Query)
-    - [Query.ValsEntry](#http-Query-ValsEntry)
+- [chaos/http/url.proto](#chaos_http_url-proto)
+    - [Url](#chaos-http-Url)
   
-- [http/url.proto](#http_url-proto)
-    - [Url](#http-Url)
+- [chaos/http/version.proto](#chaos_http_version-proto)
+    - [Version](#chaos-http-Version)
   
-- [http/version.proto](#http_version-proto)
-    - [Version](#http-Version)
-  
-- [http/request.proto](#http_request-proto)
-    - [Request](#http-Request)
+- [chaos/http/request.proto](#chaos_http_request-proto)
+    - [Request](#chaos-http-Request)
   
 - [Scalar Value Types](#scalar-value-types)
 
 
 
-<a name="http_authority-proto"></a>
+<a name="chaos_http_authority-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http/authority.proto
+## chaos/http/authority.proto
 
 
 
-<a name="http-Authority"></a>
+<a name="chaos-http-Authority"></a>
 
 ### Authority
 
@@ -66,45 +63,14 @@
 
 
 
-<a name="http_string_values-proto"></a>
+<a name="chaos_http_header-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http/string_values.proto
+## chaos/http/header.proto
 
 
 
-<a name="http-StringValues"></a>
-
-### StringValues
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| vals | [string](#string) | repeated |  |
-
-
-
-
-
- 
-
- 
-
- 
-
- 
-
-
-
-<a name="http_header-proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## http/header.proto
-
-
-
-<a name="http-Header"></a>
+<a name="chaos-http-Header"></a>
 
 ### Header
 
@@ -112,14 +78,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| Vals | [Header.ValsEntry](#http-Header-ValsEntry) | repeated |  |
+| Vals | [Header.ValsEntry](#chaos-http-Header-ValsEntry) | repeated |  |
 
 
 
 
 
 
-<a name="http-Header-ValsEntry"></a>
+<a name="chaos-http-Header-ValsEntry"></a>
 
 ### Header.ValsEntry
 
@@ -128,7 +94,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
-| value | [StringValues](#http-StringValues) |  |  |
+| value | [chaos.core.Values](#chaos-core-Values) |  |  |
 
 
 
@@ -144,16 +110,16 @@
 
 
 
-<a name="http_method-proto"></a>
+<a name="chaos_http_method-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http/method.proto
+## chaos/http/method.proto
 
 
  
 
 
-<a name="http-Method"></a>
+<a name="chaos-http-Method"></a>
 
 ### Method
 
@@ -178,14 +144,14 @@
 
 
 
-<a name="http_query-proto"></a>
+<a name="chaos_http_query-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http/query.proto
+## chaos/http/query.proto
 
 
 
-<a name="http-Query"></a>
+<a name="chaos-http-Query"></a>
 
 ### Query
 
@@ -193,14 +159,14 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| Vals | [Query.ValsEntry](#http-Query-ValsEntry) | repeated |  |
+| Vals | [Query.ValsEntry](#chaos-http-Query-ValsEntry) | repeated |  |
 
 
 
 
 
 
-<a name="http-Query-ValsEntry"></a>
+<a name="chaos-http-Query-ValsEntry"></a>
 
 ### Query.ValsEntry
 
@@ -209,7 +175,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
-| value | [StringValues](#http-StringValues) |  |  |
+| value | [chaos.core.Values](#chaos-core-Values) |  |  |
 
 
 
@@ -225,14 +191,14 @@
 
 
 
-<a name="http_url-proto"></a>
+<a name="chaos_http_url-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http/url.proto
+## chaos/http/url.proto
 
 
 
-<a name="http-Url"></a>
+<a name="chaos-http-Url"></a>
 
 ### Url
 
@@ -241,10 +207,10 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | scheme | [string](#string) |  |  |
-| authority | [Authority](#http-Authority) |  |  |
+| authority | [Authority](#chaos-http-Authority) |  |  |
 | path | [string](#string) |  |  |
 | raw_path | [string](#string) |  |  |
-| query | [Query](#http-Query) |  |  |
+| query | [Query](#chaos-http-Query) |  |  |
 | raw_query | [string](#string) |  |  |
 | fragment | [string](#string) |  |  |
 | raw_fragment | [string](#string) |  |  |
@@ -263,14 +229,14 @@
 
 
 
-<a name="http_version-proto"></a>
+<a name="chaos_http_version-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http/version.proto
+## chaos/http/version.proto
 
 
 
-<a name="http-Version"></a>
+<a name="chaos-http-Version"></a>
 
 ### Version
 
@@ -296,14 +262,14 @@
 
 
 
-<a name="http_request-proto"></a>
+<a name="chaos_http_request-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## http/request.proto
+## chaos/http/request.proto
 
 
 
-<a name="http-Request"></a>
+<a name="chaos-http-Request"></a>
 
 ### Request
 
@@ -311,11 +277,11 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| method | [Method](#http-Method) |  |  |
-| url | [Url](#http-Url) |  |  |
-| version | [Version](#http-Version) |  |  |
-| header | [Header](#http-Header) |  |  |
-| body | [google.protobuf.Value](#google-protobuf-Value) |  |  |
+| method | [Method](#chaos-http-Method) |  |  |
+| url | [Url](#chaos-http-Url) |  |  |
+| version | [Version](#chaos-http-Version) |  |  |
+| header | [Header](#chaos-http-Header) |  |  |
+| body | [chaos.core.Value](#chaos-core-Value) |  |  |
 
 
 

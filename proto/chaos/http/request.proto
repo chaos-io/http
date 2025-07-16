@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package chaos.http;
+
+import "chaos/http/header.proto";
+import "chaos/http/method.proto";
+import "chaos/http/url.proto";
+import "chaos/http/version.proto";
+import "chaos/core/value.proto";
+
+option go_package = "github.com/chaos-io/http/go/chaos/http;http";
+
+message Request {
+  Method method = 1;
+  Url url = 2;
+  Version version = 3;
+  Header header = 4;
+  chaos.core.Value body = 5;
+}

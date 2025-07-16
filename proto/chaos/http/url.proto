@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package http;
+package chaos.http;
 
-import "http/authority.proto";
-import "http/query.proto";
+import "chaos/http/authority.proto";
+import "chaos/http/query.proto";
 
-option go_package = "github.com/chaos-io/http/go;http";
+option go_package = "github.com/chaos-io/http/go/chaos/http;http";
 
 message Url {
   string scheme = 1;

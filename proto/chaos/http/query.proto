@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package chaos.http;
+
+import "chaos/core/value.proto";
+
+option go_package = "github.com/chaos-io/http/go/chaos/http;http";
+
+message Query {
+  map<string, chaos.core.Values> Vals = 1;
+}
