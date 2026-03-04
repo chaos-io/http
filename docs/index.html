@@ -190,6 +190,25 @@
         
           
           <li>
+            <a href="#chaos%2fhttp%2fcookie.proto">chaos/http/cookie.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#chaos.http.Cookie"><span class="badge">M</span>Cookie</a>
+                </li>
+              
+              
+                <li>
+                  <a href="#chaos.http.SameSite"><span class="badge">E</span>SameSite</a>
+                </li>
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
             <a href="#chaos%2fhttp%2fheader.proto">chaos/http/header.proto</a>
             <ul>
               
@@ -243,21 +262,6 @@
         
           
           <li>
-            <a href="#chaos%2fhttp%2furl.proto">chaos/http/url.proto</a>
-            <ul>
-              
-                <li>
-                  <a href="#chaos.http.Url"><span class="badge">M</span>Url</a>
-                </li>
-              
-              
-              
-              
-            </ul>
-          </li>
-        
-          
-          <li>
             <a href="#chaos%2fhttp%2fversion.proto">chaos/http/version.proto</a>
             <ul>
               
@@ -278,6 +282,51 @@
               
                 <li>
                   <a href="#chaos.http.Request"><span class="badge">M</span>Request</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#chaos%2fhttp%2fstatus.proto">chaos/http/status.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#chaos.http.Status"><span class="badge">M</span>Status</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#chaos%2fhttp%2fresponse.proto">chaos/http/response.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#chaos.http.Response"><span class="badge">M</span>Response</a>
+                </li>
+              
+              
+              
+              
+            </ul>
+          </li>
+        
+          
+          <li>
+            <a href="#chaos%2fhttp%2furl.proto">chaos/http/url.proto</a>
+            <ul>
+              
+                <li>
+                  <a href="#chaos.http.Url"><span class="badge">M</span>Url</a>
                 </li>
               
               
@@ -345,6 +394,136 @@
     
       
       <div class="file-heading">
+        <h2 id="chaos/http/cookie.proto">chaos/http/cookie.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="chaos.http.Cookie">Cookie</h3>
+        <p>表示一个 HTTP Cookie（RFC 6265）</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>name</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>cookie-name </p></td>
+                </tr>
+              
+                <tr>
+                  <td>value</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>cookie-value </p></td>
+                </tr>
+              
+                <tr>
+                  <td>expires</td>
+                  <td><a href="#chaos.core.Timestamp">chaos.core.Timestamp</a></td>
+                  <td></td>
+                  <td><p>Expires attribute (HTTP-date)
+例如：Wed, 21 Oct 2015 07:28:00 GMT </p></td>
+                </tr>
+              
+                <tr>
+                  <td>max_age</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p>Max-Age attribute (seconds) </p></td>
+                </tr>
+              
+                <tr>
+                  <td>domain</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Domain attribute </p></td>
+                </tr>
+              
+                <tr>
+                  <td>path</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p>Path attribute </p></td>
+                </tr>
+              
+                <tr>
+                  <td>secure</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>Secure attribute </p></td>
+                </tr>
+              
+                <tr>
+                  <td>http_only</td>
+                  <td><a href="#bool">bool</a></td>
+                  <td></td>
+                  <td><p>HttpOnly attribute </p></td>
+                </tr>
+              
+                <tr>
+                  <td>same_site</td>
+                  <td><a href="#chaos.http.SameSite">SameSite</a></td>
+                  <td></td>
+                  <td><p>SameSite attribute </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+        <h3 id="chaos.http.SameSite">SameSite</h3>
+        <p>SameSite 枚举（RFC 6265bis / 实际浏览器行为）</p>
+        <table class="enum-table">
+          <thead>
+            <tr><td>Name</td><td>Number</td><td>Description</td></tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>SAME_SITE_UNSPECIFIED</td>
+                <td>0</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SAME_SITE_LAX</td>
+                <td>1</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SAME_SITE_STRICT</td>
+                <td>2</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>SAME_SITE_NONE</td>
+                <td>3</td>
+                <td><p></p></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
         <h2 id="chaos/http/header.proto">chaos/http/header.proto</h2><a href="#title">Top</a>
       </div>
       <p></p>
@@ -393,7 +572,7 @@
               
                 <tr>
                   <td>value</td>
-                  <td><a href="#chaos.core.Values">chaos.core.Values</a></td>
+                  <td><a href="#chaos.core.StringValues">chaos.core.StringValues</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -442,38 +621,44 @@
               </tr>
             
               <tr>
-                <td>METHOD_POST</td>
+                <td>METHOD_HEAD</td>
                 <td>2</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>METHOD_PUT</td>
+                <td>METHOD_POST</td>
                 <td>3</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>METHOD_DELETE</td>
+                <td>METHOD_PUT</td>
                 <td>4</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>METHOD_CONNECT</td>
+                <td>METHOD_DELETE</td>
                 <td>5</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>METHOD_OPTIONS</td>
+                <td>METHOD_CONNECT</td>
                 <td>6</td>
                 <td><p></p></td>
               </tr>
             
               <tr>
-                <td>METHOD_TRACE</td>
+                <td>METHOD_OPTIONS</td>
                 <td>7</td>
+                <td><p></p></td>
+              </tr>
+            
+              <tr>
+                <td>METHOD_TRACE</td>
+                <td>8</td>
                 <td><p></p></td>
               </tr>
             
@@ -536,6 +721,221 @@
                 <tr>
                   <td>value</td>
                   <td><a href="#chaos.core.Values">chaos.core.Values</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="chaos/http/version.proto">chaos/http/version.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="chaos.http.Version">Version</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>major</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>minor</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="chaos/http/request.proto">chaos/http/request.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="chaos.http.Request">Request</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>method</td>
+                  <td><a href="#chaos.http.Method">Method</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>url</td>
+                  <td><a href="#chaos.core.Url">chaos.core.Url</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#chaos.http.Version">Version</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>header</td>
+                  <td><a href="#chaos.http.Header">Header</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>body</td>
+                  <td><a href="#chaos.core.Value">chaos.core.Value</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="chaos/http/status.proto">chaos/http/status.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="chaos.http.Status">Status</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>code</td>
+                  <td><a href="#int32">int32</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>reason</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+
+      
+
+      
+
+      
+    
+      
+      <div class="file-heading">
+        <h2 id="chaos/http/response.proto">chaos/http/response.proto</h2><a href="#title">Top</a>
+      </div>
+      <p></p>
+
+      
+        <h3 id="chaos.http.Response">Response</h3>
+        <p></p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>version</td>
+                  <td><a href="#chaos.http.Version">Version</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>status</td>
+                  <td><a href="#chaos.http.Status">Status</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>header</td>
+                  <td><a href="#chaos.http.Header">Header</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>body</td>
+                  <td><a href="#chaos.core.Value">chaos.core.Value</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>
@@ -623,124 +1023,6 @@
                 <tr>
                   <td>raw_fragment</td>
                   <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="chaos/http/version.proto">chaos/http/version.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="chaos.http.Version">Version</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>proto</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>major</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>minor</td>
-                  <td><a href="#int32">int32</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
-
-      
-
-      
-
-      
-    
-      
-      <div class="file-heading">
-        <h2 id="chaos/http/request.proto">chaos/http/request.proto</h2><a href="#title">Top</a>
-      </div>
-      <p></p>
-
-      
-        <h3 id="chaos.http.Request">Request</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>method</td>
-                  <td><a href="#chaos.http.Method">Method</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>url</td>
-                  <td><a href="#chaos.http.Url">Url</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>version</td>
-                  <td><a href="#chaos.http.Version">Version</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>header</td>
-                  <td><a href="#chaos.http.Header">Header</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>body</td>
-                  <td><a href="#chaos.core.Value">chaos.core.Value</a></td>
                   <td></td>
                   <td><p> </p></td>
                 </tr>

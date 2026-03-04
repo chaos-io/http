@@ -2,10 +2,9 @@ syntax = "proto3";
 
 package chaos.http;
 
-option go_package = "github.com/chaos-io/http/go/chaos/http;http";
+option go_package = "github.com/chaos-io/core/go/chaos/http;http";
 
 message Version {
-  string proto = 1;
-  int32 major = 5;
-  int32 minor = 6;
+  int32 major = 1;
+  int32 minor = 2;
 }

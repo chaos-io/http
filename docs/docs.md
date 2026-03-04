@@ -6,6 +6,11 @@
 - [chaos/http/authority.proto](#chaos_http_authority-proto)
     - [Authority](#chaos-http-Authority)
   
+- [chaos/http/cookie.proto](#chaos_http_cookie-proto)
+    - [Cookie](#chaos-http-Cookie)
+  
+    - [SameSite](#chaos-http-SameSite)
+  
 - [chaos/http/header.proto](#chaos_http_header-proto)
     - [Header](#chaos-http-Header)
     - [Header.ValsEntry](#chaos-http-Header-ValsEntry)
@@ -17,14 +22,20 @@
     - [Query](#chaos-http-Query)
     - [Query.ValsEntry](#chaos-http-Query-ValsEntry)
   
-- [chaos/http/url.proto](#chaos_http_url-proto)
-    - [Url](#chaos-http-Url)
-  
 - [chaos/http/version.proto](#chaos_http_version-proto)
     - [Version](#chaos-http-Version)
   
 - [chaos/http/request.proto](#chaos_http_request-proto)
     - [Request](#chaos-http-Request)
+  
+- [chaos/http/status.proto](#chaos_http_status-proto)
+    - [Status](#chaos-http-Status)
+  
+- [chaos/http/response.proto](#chaos_http_response-proto)
+    - [Response](#chaos-http-Response)
+  
+- [chaos/http/url.proto](#chaos_http_url-proto)
+    - [Url](#chaos-http-Url)
   
 - [Scalar Value Types](#scalar-value-types)
 
@@ -54,6 +65,59 @@
 
 
  
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="chaos_http_cookie-proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## chaos/http/cookie.proto
+
+
+
+<a name="chaos-http-Cookie"></a>
+
+### Cookie
+表示一个 HTTP Cookie（RFC 6265）
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| name | [string](#string) |  | cookie-name |
+| value | [string](#string) |  | cookie-value |
+| expires | [chaos.core.Timestamp](#chaos-core-Timestamp) |  | Expires attribute (HTTP-date) 例如：Wed, 21 Oct 2015 07:28:00 GMT |
+| max_age | [int32](#int32) |  | Max-Age attribute (seconds) |
+| domain | [string](#string) |  | Domain attribute |
+| path | [string](#string) |  | Path attribute |
+| secure | [bool](#bool) |  | Secure attribute |
+| http_only | [bool](#bool) |  | HttpOnly attribute |
+| same_site | [SameSite](#chaos-http-SameSite) |  | SameSite attribute |
+
+
+
+
+
+ 
+
+
+<a name="chaos-http-SameSite"></a>
+
+### SameSite
+SameSite 枚举（RFC 6265bis / 实际浏览器行为）
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| SAME_SITE_UNSPECIFIED | 0 |  |
+| SAME_SITE_LAX | 1 |  |
+| SAME_SITE_STRICT | 2 |  |
+| SAME_SITE_NONE | 3 |  |
+
 
  
 
@@ -94,7 +158,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | key | [string](#string) |  |  |
-| value | [chaos.core.Values](#chaos-core-Values) |  |  |
+| value | [chaos.core.StringValues](#chaos-core-StringValues) |  |  |
 
 
 
@@ -128,12 +192,13 @@
 | ---- | ------ | ----------- |
 | METHOD_UNSPECIFIED | 0 |  |
 | METHOD_GET | 1 |  |
-| METHOD_POST | 2 |  |
-| METHOD_PUT | 3 |  |
-| METHOD_DELETE | 4 |  |
-| METHOD_CONNECT | 5 |  |
-| METHOD_OPTIONS | 6 |  |
-| METHOD_TRACE | 7 |  |
+| METHOD_HEAD | 2 |  |
+| METHOD_POST | 3 |  |
+| METHOD_PUT | 4 |  |
+| METHOD_DELETE | 5 |  |
+| METHOD_CONNECT | 6 |  |
+| METHOD_OPTIONS | 7 |  |
+| METHOD_TRACE | 8 |  |
 
 
  
@@ -191,44 +256,6 @@
 
 
 
-<a name="chaos_http_url-proto"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## chaos/http/url.proto
-
-
-
-<a name="chaos-http-Url"></a>
-
-### Url
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| scheme | [string](#string) |  |  |
-| authority | [Authority](#chaos-http-Authority) |  |  |
-| path | [string](#string) |  |  |
-| raw_path | [string](#string) |  |  |
-| query | [Query](#chaos-http-Query) |  |  |
-| raw_query | [string](#string) |  |  |
-| fragment | [string](#string) |  |  |
-| raw_fragment | [string](#string) |  |  |
-
-
-
-
-
- 
-
- 
-
- 
-
- 
-
-
-
 <a name="chaos_http_version-proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
@@ -244,7 +271,6 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| proto | [string](#string) |  |  |
 | major | [int32](#int32) |  |  |
 | minor | [int32](#int32) |  |  |
 
@@ -278,10 +304,114 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | method | [Method](#chaos-http-Method) |  |  |
-| url | [Url](#chaos-http-Url) |  |  |
+| url | [chaos.core.Url](#chaos-core-Url) |  |  |
 | version | [Version](#chaos-http-Version) |  |  |
 | header | [Header](#chaos-http-Header) |  |  |
 | body | [chaos.core.Value](#chaos-core-Value) |  |  |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="chaos_http_status-proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## chaos/http/status.proto
+
+
+
+<a name="chaos-http-Status"></a>
+
+### Status
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| code | [int32](#int32) |  |  |
+| reason | [string](#string) |  |  |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="chaos_http_response-proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## chaos/http/response.proto
+
+
+
+<a name="chaos-http-Response"></a>
+
+### Response
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| version | [Version](#chaos-http-Version) |  |  |
+| status | [Status](#chaos-http-Status) |  |  |
+| header | [Header](#chaos-http-Header) |  |  |
+| body | [chaos.core.Value](#chaos-core-Value) |  |  |
+
+
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+<a name="chaos_http_url-proto"></a>
+<p align="right"><a href="#top">Top</a></p>
+
+## chaos/http/url.proto
+
+
+
+<a name="chaos-http-Url"></a>
+
+### Url
+
+
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| scheme | [string](#string) |  |  |
+| authority | [Authority](#chaos-http-Authority) |  |  |
+| path | [string](#string) |  |  |
+| raw_path | [string](#string) |  |  |
+| query | [Query](#chaos-http-Query) |  |  |
+| raw_query | [string](#string) |  |  |
+| fragment | [string](#string) |  |  |
+| raw_fragment | [string](#string) |  |  |
 
 
 

@@ -2,10 +2,10 @@ syntax = "proto3";
 
 package chaos.http;
 
-import "chaos/core/value.proto";
+import "chaos/core/boxed.proto";
 
-option go_package = "github.com/chaos-io/http/go/chaos/http;http";
+option go_package = "github.com/chaos-io/core/go/chaos/http;http";
 
 message Header {
-  map<string, chaos.core.Values> Vals = 1;
+  map<string, core.StringValues> Vals = 1;
 }

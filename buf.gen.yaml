@@ -20,7 +20,3 @@ plugins:
     opt: markdown,docs.md
   - local: protoc-gen-openapiv2
     out: openapi
-inputs:
-  - directory: proto
-    exclude_paths:
-      - proto/chaos/core
